@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wood & Power creates custom, premium handmade furniture combining solid Virginia wood slabs with modern integrated power solutions like wireless charging.">
+  <title>Wood & Power | Custom Handmade Furniture with Integrated Tech</title>
+  <link rel="icon" type="image/png" href="wood-power-icon.png">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="#home" class="logo-link" id="header-logo-link">
+        <img src="wood-power-icon.png" alt="Wood & Power Icon">
+        <span class="logo-text">WOOD & POWER</span>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#story" class="nav-link">Our Story</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#power" class="nav-link">Integrated Power</a></li>
+          <li><a href="#configurator" class="nav-link">Quote Configurator</a></li>
+        </ul>
+      </nav>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu" id="nav-toggle-button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content scroll-reveal">
+      <img src="wood-power-brand-Light.png" alt="Wood & Power Branding Logo" class="hero-logo-img">
+      <h1>Wood &amp; Power</h1>
+      <p class="hero-sub">Custom Handmade Furniture</p>
+      <div class="vintage-divider">
+        <span class="vintage-divider-dot"></span>
+      </div>
+      <p class="hero-desc">
+        Merging the timeless character of live edge Virginia timber with the seamless utility of modern technology. Handcrafted tables, desks, and seating designed for today, built for generations.
+      </p>
+      <div class="hero-actions">
+        <a href="#configurator" class="btn btn-primary" id="hero-cta-design">Design Yours</a>
+        <a href="#gallery" class="btn btn-secondary" id="hero-cta-browse">Browse Craft</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story & Craftsmanship -->
+  <section class="section-pad scroll-reveal" id="story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-text">
+          <span class="vintage-tagline">The Art of the Craft</span>
+          <h3>From the forest floor to your workspace</h3>
+          <p class="lead">
+            Every piece we craft starts with a journey into the Appalachian woodlands of Virginia to select timber with singular grain patterns and structural integrity.
+          </p>
+          <p>
+            We respect the natural history of our wood. Using a combination of traditional hand-planing and modern slab flattening, we preserve the organic raw edge of the slab. We then pair this organic beauty with robust, custom-welded steel bases and hand-rubbed oil finishes.
+          </p>
+          <p>
+            But we don't stop at the surface. Underneath the timber lies hidden engineering: router-channeled power cords, flush steel grommets, and smart charging ports designed to keep your space uncluttered and powered.
+          </p>
+          <p class="story-signature">— Todd Blackmon, Master Craftsman</p>
+        </div>
+        
+        <div class="story-img-container">
+          <div class="story-img-frame">
+            <img src="Photos/VA-Workshop.jpeg" alt="Inside the Wood & Power workshop in Virginia">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Gallery Section -->
+  <section class="section-pad scroll-reveal" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="vintage-tagline">Selected Works</span>
+        <h2>Product Showcase</h2>
+        <div class="vintage-divider">
+          <span class="vintage-divider-dot"></span>
+        </div>
+      </div>
+      
+      <ul class="gallery-filters" aria-label="Filter gallery items">
+        <li><button class="filter-btn active" data-filter="all">All Pieces</button></li>
+        <li><button class="filter-btn" data-filter="tables">Tables &amp; Desks</button></li>
+        <li><button class="filter-btn" data-filter="seating">Seating</button></li>
+        <li><button class="filter-btn" data-filter="accessories">Accessories</button></li>
+      </ul>
+      
+      <div class="gallery-grid">
+        <!-- Item 1: Live Edge Slab Table -->
+        <div class="gallery-item" data-category="tables" 
+             data-title="Live Edge Dining Table"
+             data-description="This stunning dining table is handcrafted from a massive, single slab of local Virginia Red Oak. The grain features deep character lines preserved under a durable, hand-applied satin seal. Welded industrial steel trapezoid legs provide exceptional support."
+             data-specs='{"Wood Type": "Virginia Red Oak", "Dimensions": "84\" L x 38\" W x 30\" H", "Leg Type": "Steel Trapezoid", "Power Options": "Under-mount Outlet available"}'>
+          <div class="gallery-img-wrapper">
+            <span class="gallery-item-badge">Featured</span>
+            <img src="Photos/Live%20Edge%20Slab%20Table.jpeg" alt="Live Edge Slab Dining Table">
+          </div>
+          <div class="gallery-info">
+            <h3>Live Edge Table <span>Slab Table</span></h3>
+            <p>Solid single-slab Red Oak dining table supported by custom heavy-welded steel legs.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Red Oak</span>
+              <span class="gallery-tag">Steel Base</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Bar Stools -->
+        <div class="gallery-item" data-category="seating"
+             data-title="Industrial Bar Stools"
+             data-description="Engineered for both posture comfort and rustic elegance. These matching bar stools feature thick, contoured slabs of native Ash wood tops anchored to heavily welded industrial legs. Each top is hand-planed to maximize wood rings."
+             data-specs='{"Wood Type": "Virginia Ash", "Dimensions": "14\" Diameter x 30\" H", "Leg Type": "Welded Industrial Rods", "Power Options": "None"}'>
+          <div class="gallery-img-wrapper">
+            <img src="Photos/Bar%20Stools.jpeg" alt="Handmade Bar Stools">
+          </div>
+          <div class="gallery-info">
+            <h3>Industrial Stools <span>Seating</span></h3>
+            <p>Matching set of bar stools with thick, circular wood tops and welded steel frame.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Ash Wood</span>
+              <span class="gallery-tag">Seating</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Smart Stand-up Desk -->
+        <div class="gallery-item" data-category="tables"
+             data-title="Electric Stand-Up Desk"
+             data-description="Where health meets custom design. A premium solid slab top mounted onto a high-performance dual-motorized standing desk frame. Cords are fully channeled through the rear leg. Features a flush-mounted custom steel control panel."
+             data-specs='{"Wood Type": "Appalachian Walnut", "Dimensions": "60\" L x 30\" W x 28\"-48\" H", "Leg Type": "Dual-Motor Electric Lift", "Power Options": "Integrated Qi Charger & 4-port Power Strip"}'>
+          <div class="gallery-img-wrapper">
+            <span class="gallery-item-badge">Tech Integrated</span>
+            <img src="Photos/Electric-Stand-up-Desk.jpeg" alt="Electric standing desk with solid wood top">
+          </div>
+          <div class="gallery-info">
+            <h3>Stand-up Desk <span>Smart Tech</span></h3>
+            <p>Motorized standing desk with solid Walnut slab, internal cord management, and built-in power hub.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Walnut</span>
+              <span class="gallery-tag">Motorized</span>
+              <span class="gallery-tag">Power Hub</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: TV Tray Table -->
+        <div class="gallery-item" data-category="tables"
+             data-title="Vintage C-Frame Tray Table"
+             data-description="The ultimate sofa companion. Designed with a cantilevered C-style base to slide snugly under low-clearance couches. Integrates a custom recessed wireless charging module beneath the wood grain so your phone charges by just laying on it."
+             data-specs='{"Wood Type": "Cherry Wood", "Dimensions": "18\" L x 12\" W x 26\" H", "Leg Type": "Welded C-Frame Steel", "Power Options": "Concealed Qi Wireless Charging Coil"}'>
+          <div class="gallery-img-wrapper">
+            <img src="Photos/TV%20Table%20Tray.jpg" alt="Vintage C-Frame TV Tray Table">
+          </div>
+          <div class="gallery-info">
+            <h3>C-Frame Tray Table <span>Wireless Charge</span></h3>
+            <p>Cantilever sofa table with fully hidden under-surface wireless phone charging.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Cherry</span>
+              <span class="gallery-tag">Sofa Table</span>
+              <span class="gallery-tag">Qi Charging</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Slab Shelves -->
+        <div class="gallery-item" data-category="accessories"
+             data-title="Live Edge Floating Shelves"
+             data-description="Bring natural dimension to any room. These heavy-duty floating shelves are cut from high-character live edge slabs. Hidden internal steel brackets support significant weight while keeping the mount entirely clean."
+             data-specs='{"Wood Type": "Red Oak / Walnut", "Dimensions": "36\" L x 8\" W x 2\" Thick", "Leg Type": "Hidden Heavy Bracket", "Power Options": "None"}'>
+          <div class="gallery-img-wrapper">
+            <img src="Photos/Slab%20Shelves.PNG" alt="Live Edge Floating Shelves">
+          </div>
+          <div class="gallery-info">
+            <h3>Floating Shelves <span>Storage</span></h3>
+            <p>Thick live-edge lumber shelves mounted with heavy invisible brackets.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Live Edge</span>
+              <span class="gallery-tag">Wall Mount</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Railroad Spike Hat Rack -->
+        <div class="gallery-item" data-category="accessories"
+             data-title="Railroad Spike Hat Rack"
+             data-description="A rugged piece of industrial history. Constructed from character-rich weathered Pine beams and accented with authentic vintage steel railroad spikes acting as durable coat hooks."
+             data-specs='{"Wood Type": "Weathered Heart Pine", "Dimensions": "48\" L x 6\" W x 1\" Thick", "Leg Type": "Flush Wall Keyholes", "Power Options": "None"}'>
+          <div class="gallery-img-wrapper">
+            <img src="Photos/HatRackRailroadSpikes.jpeg" alt="Railroad Spike Hat Rack">
+          </div>
+          <div class="gallery-info">
+            <h3>Spike Hat Rack <span>Accessories</span></h3>
+            <p>Wall-mounted coat rack featuring authentic vintage iron railroad spikes and rustic pine.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Pine</span>
+              <span class="gallery-tag">Iron Spikes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail Lightbox Modal (JavaScript Powered) -->
+  <div class="lightbox" id="product-lightbox" aria-hidden="true" role="dialog">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close-button" aria-label="Close details">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <div class="lightbox-img-wrapper">
+        <img id="lightbox-image" src="" alt="Detail View">
+      </div>
+      
+      <div class="lightbox-info">
+        <span class="lightbox-category" id="lightbox-category">Category</span>
+        <h3 class="lightbox-title" id="lightbox-title">Product Title</h3>
+        <p class="lightbox-description" id="lightbox-description">Detailed description of the product and its construction process.</p>
+        
+        <div class="lightbox-specs">
+          <h4 class="lightbox-specs-title">Technical Details</h4>
+          <ul class="lightbox-specs-list" id="lightbox-specs-list">
+            <!-- JavaScript Injected -->
+          </ul>
+        </div>
+        
+        <div class="lightbox-cta">
+          <a href="#configurator" class="btn btn-primary" id="lightbox-cta-btn">Inquire About This Piece</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div class="lightbox" id="privacy-modal" aria-hidden="true" role="dialog">
+    <div class="lightbox-content" style="grid-template-columns: 1fr; max-width: 700px; max-height: 85vh; overflow-y: auto;">
+      <button class="lightbox-close" id="privacy-close-button" aria-label="Close Privacy Policy">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <div class="lightbox-info">
+        <span class="lightbox-category">Legal &amp; Trust</span>
+        <h3 class="lightbox-title" style="margin-bottom: 1.5rem;">Privacy Policy</h3>
+        <div class="legal-content">
+          <p>At Wood &amp; Power, we respect your privacy and are committed to protecting the personal data you share with us. This policy outlines how we handle information submitted through our website.</p>
+          
+          <h4 style="font-family: var(--font-serif-header); font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--iron);">1. Information We Collect</h4>
+          <p>We only collect information that you voluntarily provide to us when drafting a custom commission through our Interactive Quote Configurator. This includes your name, email address, custom furniture specifications, leg choices, tech options, dimensions, and special design instructions.</p>
+          
+          <h4 style="font-family: var(--font-serif-header); font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--iron);">2. How We Use Your Information</h4>
+          <p>The information you submit is used solely to evaluate your custom request, cross-reference it against our raw wood slab inventory at our Virginia workshop, and correspond with you regarding your quote. If checked, we may occasionally email you about new timber arrivals or workshop updates.</p>
+          
+          <h4 style="font-family: var(--font-serif-header); font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--iron);">3. Data Protection and Sharing</h4>
+          <p>We do not sell, trade, rent, or lease your personal information to third parties. All submissions are stored securely. We may store data locally on your device (using browser LocalStorage) so that you can view your draft commission log at any time.</p>
+          
+          <h4 style="font-family: var(--font-serif-header); font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--iron);">4. Contact Us</h4>
+          <p>If you have any questions about this Privacy Policy or wish to have your commission drafts removed, please contact us at <strong>info@woodandpower.com</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms of Commission Modal -->
+  <div class="lightbox" id="terms-modal" aria-hidden="true" role="dialog">
+    <div class="lightbox-content" style="grid-template-columns: 1fr; max-width: 700px; max-height: 85vh; overflow-y: auto;">
+      <button class="lightbox-close" id="terms-close-button" aria-label="Close Terms of Commission">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <div class="lightbox-info">
+        <span class="lightbox-category">Craft Agreement</span>
+        <h3 class="lightbox-title" style="margin-bottom: 1.5rem;">Terms of Commission</h3>
+        <div class="legal-content">
+          <p>By submitting a commission draft and placing a deposit with Wood &amp; Power LLC, you agree to the following craftsman terms and guidelines:</p>
+          
+          <h4 style="font-family: var(--font-serif-header); font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--iron);">1. Wood Characteristics &amp; Variations</h4>
+          <p>We work exclusively with solid hardwood timber slabs. Wood is an organic material that reacts to temperature and humidity. Natural features such as growth rings, live bark edges, grain swirls, small cracks (checks), and knots are characteristic of raw timber and are celebrated. These natural markings are not considered defects. Wood will expand, contract, and alter color over time as it adjusts to your home environment.</p>
+          
+          <h4 style="font-family: var(--font-serif-header); font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--iron);">2. Commission Deposits &amp; Lead Times</h4>
+          <p>All custom pieces require a 50% non-refundable deposit before we begin slab preparation, welding, or assembly. This deposit covers timber sourcing and shop materials. Standard workshop lead times are estimated at 6 to 12 weeks, depending on design complexity. The remaining 50% balance must be paid upon project completion, prior to pickup or delivery.</p>
+          
+          <h4 style="font-family: var(--font-serif-header); font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--iron);">3. Technology &amp; Power Safety</h4>
+          <p>Our integrated Qi wireless chargers and custom outlets are built with certified, high-grade electronics recessed and routed through solid timber. We conduct comprehensive electrical and thermal testing before delivery. However, clients must ensure all connected cables are plugged into surge-protected outlets, and the desk or table must not be exposed to water or moisture.</p>
+          
+          <h4 style="font-family: var(--font-serif-header); font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--iron);">4. Freight, Delivery &amp; Pickup</h4>
+          <p>Clients are welcome to schedule a pickup by appointment at our Blue Ridge, Virginia workshop. If freight shipping is required, shipping costs are the sole responsibility of the client and will be billed separately. We ensure all slabs are crated with shock-absorbing foam to prevent transport damage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Power Integration Feature Section -->
+  <section class="section-pad power-section scroll-reveal" id="power">
+    <div class="container">
+      <div class="section-header">
+        <span class="vintage-tagline">Engineering the Future</span>
+        <h2 style="color: var(--parchment)">Seamless Power Integration</h2>
+        <div class="vintage-divider">
+          <span class="vintage-divider-dot"></span>
+        </div>
+      </div>
+      
+      <div class="power-grid">
+        <div class="power-features">
+          <!-- Feature 1 -->
+          <div class="power-feature-card">
+            <div class="power-feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <div class="power-feature-info">
+              <h3>Flush Qi Wireless Charging</h3>
+              <p>We machine a precise cavity beneath the top surface of the wood. The wireless transmitter charges devices directly through up to 8mm of solid hardwood, marked by a beautiful flush steel or scorched-wood inlay.</p>
+            </div>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="power-feature-card">
+            <div class="power-feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                <line x1="7" y1="2" x2="7" y2="22"></line>
+                <line x1="17" y1="2" x2="17" y2="22"></line>
+              </svg>
+            </div>
+            <div class="power-feature-info">
+              <h3>Internal Routing &amp; Cable Runs</h3>
+              <p>Say goodbye to tangled wires. Our table slabs and desks feature back-channeled cable paths and legs with integrated hollow cores to route power lines cleanly down to outlet sources.</p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="power-feature-card">
+            <div class="power-feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <div class="power-feature-info">
+              <h3>Custom Installed Outlets</h3>
+              <p>Heavy duty outlets can be integrated flush to the edge or surface of your desk or table. Hand-crafted plates ensure the power options match the aesthetic of raw lumber.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="power-visual">
+          <div class="power-visual-frame">
+            <img src="Photos/WirelessCharger.jpeg" alt="Close-up of integrated wireless charging coil inside solid wood table">
+          </div>
+          <div class="power-badge-overlay">
+            100% Solid Timber &amp; Steel
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Quote Configurator & Contact Form -->
+  <section class="section-pad scroll-reveal" id="configurator">
+    <div class="container">
+      <div class="section-header">
+        <span class="vintage-tagline">Tailored To You</span>
+        <h2>Interactive Quote Configurator</h2>
+        <div class="vintage-divider">
+          <span class="vintage-divider-dot"></span>
+        </div>
+      </div>
+      
+      <div class="configurator-wrapper">
+        <div class="configurator-intro">
+          <h3>Create Your Commission</h3>
+          <p>
+            Every commission starts with a dialogue. Use our interactive catalog sheet to select your preferred timber, structural features, and technology integration.
+          </p>
+          <p>
+            Once submitted, Todd will review the details, examine our current raw slab inventory in Virginia, and get in touch with you within 48 hours to discuss pricing and slab selection.
+          </p>
+          
+          <div class="configurator-steps">
+            <div class="config-step-card">
+              <h4>1. Choose Timber &amp; Frame</h4>
+              <p>Select your favorite slab species (e.g. bold Red Oak, dark Walnut, bright Maple) and heavy industrial bases.</p>
+            </div>
+            <div class="config-step-card">
+              <h4>2. Select Technology</h4>
+              <p>Add built-in wireless charging, flush outlets, or electric height adjustment mechanisms.</p>
+            </div>
+            <div class="config-step-card">
+              <h4>3. Finalize Details</h4>
+              <p>Confirm the estimated dimensions and detail styling. We'll find the perfect raw slabs from the workshop.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="configurator-form-container" id="config-form-section">
+          <!-- Form Submit Status Alerts -->
+          <div class="submit-status success" id="form-success-alert">
+            Thank you! Your custom commission request has been recorded. We will review your selections against our Virginia workshop slab stock and call/email you shortly.
+          </div>
+          <div class="submit-status error" id="form-error-alert">
+            Please fill in all required fields marked with an asterisk (*).
+          </div>
+          
+          <form id="quote-request-form" novalidate>
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="client-name">Your Name *</label>
+                <input type="text" id="client-name" name="name" class="form-control" placeholder="Todd Blackmon" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="client-email">Email Address *</label>
+                <input type="email" id="client-email" name="email" class="form-control" placeholder="todd@woodandpower.com" required>
+              </div>
+            </div>
+            
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="furniture-type">Furniture Style *</label>
+                <select id="furniture-type" name="furnitureType" class="form-control" required>
+                  <option value="">-- Choose Style --</option>
+                  <option value="dining-table">Live Edge Dining Table</option>
+                  <option value="standing-desk">Smart Stand-Up Desk</option>
+                  <option value="sofa-table">C-Frame Sofa Tray Table</option>
+                  <option value="bar-stools">Industrial Bar Stools</option>
+                  <option value="shelves">Floating Slab Shelves</option>
+                  <option value="custom">Fully Custom Piece</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="wood-type">Wood Slab Species *</label>
+                <select id="wood-type" name="woodType" class="form-control" required>
+                  <option value="">-- Select Timber --</option>
+                  <option value="red-oak">Virginia Red Oak (Strong grain)</option>
+                  <option value="walnut">Appalachian Walnut (Deep chocolate)</option>
+                  <option value="ash">Local Ash (Light, textured)</option>
+                  <option value="pine">Weathered Heart Pine (Rustic character)</option>
+                  <option value="maple">Hard Maple (Bright, heavy)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="power-option">Power Integration</label>
+                <select id="power-option" name="powerOption" class="form-control">
+                  <option value="none">None (Standard Wood Furniture)</option>
+                  <option value="wireless-qi">Embedded Qi Wireless Charging</option>
+                  <option value="flush-outlets">Flush Steel Power Outlet Bezel</option>
+                  <option value="hybrid">Hybrid (Recessed Wireless &amp; AC Outlets)</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="leg-style">Base / Leg System</label>
+                <select id="leg-style" name="legStyle" class="form-control">
+                  <option value="steel-trapezoid">Welded Steel Trapezoid Base</option>
+                  <option value="steel-legs">Welded Steel Straight Rod Legs</option>
+                  <option value="electric-lift">Motorized Electric Standing Base</option>
+                  <option value="wood-base">Hand-carved Matching Wood Legs</option>
+                  <option value="floating">Floating Invisible Mounts</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="dimensions">Approximate Dimensions (Length x Width in feet)</label>
+              <input type="text" id="dimensions" name="dimensions" class="form-control" placeholder="e.g. 6ft x 3ft">
+            </div>
+            
+            <div class="form-group">
+              <label for="special-notes">Special Instructions &amp; Custom Details</label>
+              <textarea id="special-notes" name="notes" class="form-control" placeholder="List any preferred edge styling (square vs live edge), specific slab details, or details about your tech needs..."></textarea>
+            </div>
+            
+            <div class="checkbox-group">
+              <input type="checkbox" id="newsletter-check" name="newsletter" checked>
+              <label for="newsletter-check">Sign me up to receive updates about new slab stock and workshop projects</label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%" id="submit-commission-btn">Submit Commission Draft</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col footer-about">
+        <a href="#home" class="logo-link">
+          <img src="wood-power-icon.png" alt="Wood & Power Icon">
+          <span class="logo-text">WOOD & POWER</span>
+        </a>
+        <p>
+          Handcrafting heritage-grade furniture by blending traditional hand craftsmanship with clean, concealed modern power integration. Built locally in Virginia.
+        </p>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#gallery">Product Showcase</a></li>
+          <li><a href="#power">Power Integration</a></li>
+          <li><a href="#configurator">Quote Configurator</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>The Workshop</h4>
+        <ul class="footer-links">
+          <li><a href="#story">Virginia Slabs</a></li>
+          <li><a href="#power">Integrated Power Details</a></li>
+          <li><a href="#configurator">Commission Process</a></li>
+          <li><a href="#gallery">Recent Commissions</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col footer-contact">
+        <h4>Get in Touch</h4>
+        <p><strong>Workshop:</strong> Blue Ridge Mountains, Virginia</p>
+        <p><strong>Email:</strong> info@woodandpower.com</p>
+        <p><strong>Hours:</strong> Mon - Sat: 8am - 6pm EST</p>
+        
+        <div class="footer-social-links">
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Pinterest">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="6" y1="9" x2="6" y2="21"></line>
+              <line x1="9" y1="6" x2="21" y2="6"></line>
+              <path d="M9 10a5 5 0 0 1 5-5h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4a5 5 0 0 1-5-5V10z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Contact Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Wood &amp; Power LLC. Custom Handmade Furniture. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#privacy-modal" id="open-privacy-btn">Privacy Policy</a>
+        <a href="#terms-modal" id="open-terms-btn">Terms of Commission</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
