@@ -360,33 +360,60 @@ function initQuoteConfigurator() {
     // Form Submission Visual State
     const originalText = submitBtn.textContent;
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Recording Commission Details...';
+    submitBtn.textContent = 'Submitting Commission Request...';
     
-    // Simulate API delay
-    setTimeout(() => {
-      // Local storage persistence (useful demonstration for offline apps)
-      const commissionLogs = JSON.parse(localStorage.getItem('wood_power_commissions') || '[]');
-      commissionLogs.push({
-        id: 'WP-' + Math.floor(Math.random() * 900000 + 100000),
-        date: new Date().toISOString(),
-        ...data
-      });
-      localStorage.setItem('wood_power_commissions', JSON.stringify(commissionLogs));
-      
-      // Update success message text dynamically for personalization
-      const fName = document.getElementById('furniture-type').options[document.getElementById('furniture-type').selectedIndex].text;
-      successAlert.innerHTML = `<strong>Order Registered!</strong> Thank you, ${data.name}. We've saved your custom commission draft for the <strong>${fName}</strong>. Our workshop in Virginia will review your timber choices and contact you at <strong>${data.email}</strong> shortly.`;
-      
-      successAlert.style.display = 'block';
-      successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      
-      // Reset form state
-      form.reset();
+    // Send form data to submit-quote.php
+    fetch('submit-quote.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (!response.ok) {
+        return response.json().then(errData => {
+          throw new Error(errData.message || 'Server error. Please try again.');
+        });
+      }
+      return response.json();
+    })
+    .then(res => {
+      if (res.success) {
+        // Local storage persistence
+        const commissionLogs = JSON.parse(localStorage.getItem('wood_power_commissions') || '[]');
+        commissionLogs.push({
+          id: 'WP-' + Math.floor(Math.random() * 900000 + 100000),
+          date: new Date().toISOString(),
+          ...data
+        });
+        localStorage.setItem('wood_power_commissions', JSON.stringify(commissionLogs));
+        
+        // Update success message text dynamically for personalization
+        const fName = document.getElementById('furniture-type').options[document.getElementById('furniture-type').selectedIndex].text;
+        successAlert.innerHTML = `<strong>Order Registered!</strong> Thank you, ${data.name}. We've saved your custom commission draft for the <strong>${fName}</strong>. Our workshop in Virginia will review your timber choices and contact you at <strong>${data.email}</strong> shortly.`;
+        
+        successAlert.style.display = 'block';
+        successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        
+        // Reset form state
+        form.reset();
+        updateSubmitButtonText();
+      } else {
+        errorAlert.textContent = res.message || 'Please fill in all required fields.';
+        errorAlert.style.display = 'block';
+        errorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(err => {
+      console.error('Error submitting form:', err);
+      errorAlert.textContent = err.message || 'Unable to submit request. Please check your internet connection or email info@woodandpower.com directly.';
+      errorAlert.style.display = 'block';
+      errorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    })
+    .finally(() => {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Submit Commission Draft';
-      
-      console.log('Commission saved successfully!', data);
-    }, 1200);
+      if (submitBtn.textContent === 'Submitting Commission Request...') {
+        submitBtn.textContent = 'Submit Commission Draft';
+      }
+    });
   });
 }
 
