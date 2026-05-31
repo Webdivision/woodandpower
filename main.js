@@ -1,6 +1,6 @@
 // Wood & Power - Interactive Logic
 
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
   initHeaderScroll();
   initMobileMenu();
   initScrollAnimations();
@@ -8,7 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initLegalModals();
   initQuoteConfigurator();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
 
 /**
  * 1. Fixed Header Scroll Effect
@@ -36,7 +42,12 @@ function initMobileMenu() {
   const toggleBtn = document.getElementById('nav-toggle-button');
   const navMenu = document.querySelector('.nav-menu');
   
-  if (!toggleBtn || !navMenu) return;
+  if (!toggleBtn || !navMenu) {
+    console.warn('Wood & Power: Navigation elements not found');
+    return;
+  }
+
+  console.log('Wood & Power: Mobile menu event listeners attached');
 
   toggleBtn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -45,6 +56,7 @@ function initMobileMenu() {
     
     // Toggle active state
     navMenu.classList.toggle('active');
+    console.log('Wood & Power: Menu toggled, active state:', navMenu.classList.contains('active'));
   });
 
   // Close menu when clicking links or clicking outside
@@ -52,13 +64,17 @@ function initMobileMenu() {
     link.addEventListener('click', () => {
       navMenu.classList.remove('active');
       toggleBtn.setAttribute('aria-expanded', 'false');
+      console.log('Wood & Power: Navigated link clicked, closing menu');
     });
   });
 
   document.addEventListener('click', (e) => {
     if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
-      navMenu.classList.remove('active');
-      toggleBtn.setAttribute('aria-expanded', 'false');
+      if (navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        console.log('Wood & Power: Clicked outside, closing menu');
+      }
     }
   });
 }
