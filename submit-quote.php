@@ -47,7 +47,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Recipient email
-$to = 'info@woodandpower.com';
+$to = 'todd@webdivision.net';
 
 // Subject
 $subject = 'New Commission Request from ' . $name;
