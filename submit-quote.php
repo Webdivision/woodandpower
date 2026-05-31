@@ -118,14 +118,12 @@ $emailBody .= "Signed up for updates: " . $newsletter . "\n\n";
 $emailBody .= "==================================================\n";
 
 // Set headers to avoid spam detection
-$headers = [
-    'From' => 'Wood & Power Configurator <noreply@woodandpower.com>',
-    'Reply-To' => $name . ' <' . $email . '>',
-    'X-Mailer' => 'PHP/' . phpversion()
-];
+$headers = "From: Wood & Power Configurator <noreply@woodandpower.com>\r\n";
+$headers .= "Reply-To: " . $name . " <" . $email . ">\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion();
 
-// Send the email
-$mailSent = mail($to, $subject, $emailBody, $headers);
+// Send the email with the -f flag (envelope sender) to prevent SPF/DMARC failures on shared hosting
+$mailSent = mail($to, $subject, $emailBody, $headers, "-f noreply@woodandpower.com");
 
 if ($mailSent) {
     echo json_encode([
